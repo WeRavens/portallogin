@@ -1,179 +1,137 @@
-@font-face {
-    font-family: 'mchina';
-    src: url("./font/MADEC___.TTF") format('truetype');
-    font-weight: normal;
+@font-face{
+    font-family: "mchine";
+    src: url("./font/MADEC___.TTF") format("truetype");
     font-style: normal;
-}     
-@font-face {
-    font-family: 'draco';
-    src: url("./font/Draco.otf") format("truetype");
     font-weight: normal;
-    font-style: normal;
-}  
-        
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        body{
-            width: 100vw;
-            height: 100vh;
-            background-color: rgb(5, 10, 23);
-        }
-        .maincontainer{
-            display: flex;
-        }
-        header{
-            color: white;
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            border-bottom: 1.5px solid ;
-            padding: 11px 1px;
-        }
-        header img{
-            width: 45px;
-        }
-        header h2{
-            font-weight: 100;
-            font-family: 'draco';
-        }
-        nav ul,nav a{
-            gap: 7px;
-            display: flex;
-            list-style: none;
-            text-decoration: none;
-            color: white;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-        .login{
-            width: 100%;height: 100%;
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-        .containerl{
-            display: none;
-            flex-direction: column;
-            justify-content:center;
-            align-items: center;
-            width: 250px;
-            height: 250px;
-            background: rgb(4, 4, 73);
-            border-radius: 50%;
-            gap: 7%;
-            position: relative;
-            box-shadow: 0 0 15px aqua;
-            z-index: 1;border-right: 1px solid aqua;border-left: 1px solid aqua;border-bottom:1px solid aqua;
-            overflow: hiddeen;
-        }
-
-        .containerl::before{
-        content: "";
-        position: absolute;
-        /* width: calc(100% + 50px);
-        height: calc(100% + 50px); */
-        width: 100px;
-  height: 100px;
-  background: aqua;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-        z-index: 1;
-        left: 50%;
-        top: 70px;
-        transform: translateX(-50%);
-        animation: rotatet 2s linear infinite;
-        transform-origin: center;
-        transform: translate(-50%, -50%) rotate(0deg);
-        }
-
-        .czontainerl::before{
-            content: "";
-            position: absolute;
-            top: -4px;
-            left: -4px;
-            width: calc(100% + 8px);
-            height: calc(100% + 8px);
-            box-shadow:  0 0 15px rgb(255, 238, 0);
-            z-index: -1;
-            background: conic-gradient(rgb(0, 238, 255), rgb(0, 30, 255),rgb(0, 255, 195));
-            animation: rotatqet 2s linear infinite;
-        }
-        @keyframes rotatet {
-            0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-        }
-        .containerl::after{
-            content: "";
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            width: calc(100% - 8px);
-            height: calc(100% - 8px);
-            background: rgb(27, 41, 110);
-            border-radius: 50%;
-            z-index: -1;
-        }
-        .btn{
-            padding: 9px 50px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            background: linear-gradient(to right,aqua,rgb(0, 89, 255));
-            color: white;
-        }
-        #password{
-            border-radius: 30px;
-            padding: 7px;
-            border: none;
-        }
-        .hlog{
-            font-family: 'mchina';
-            font-weight: 100;
-            font-size: 3rem;
-            color: rgb(22, 115, 255);
-        }
-        p{
-            color: white;
-        }
-        
- 
-
-        input:focus{
-            border: none;
-            outline: none;
-            color: white;
-            box-shadow: 0 1px 7px rgb(0, 255, 255);
-        }
-        input{
-            background: rgba(9, 21, 64, 0.326);
-            border: none;
-            outline: none;
-            color: white;
-        }
-        input::placeholder{
-            color: hsl(240, 48%, 46%);
-        }
-      .spinner {
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 100px solid aqua;
-  animation: spinn 2s linear infinite;
-  transform-origin: center;
 }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(16, 21, 25), rgb(49, 49, 150));
+}
+.logincontainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to bottom,rgb(0, 163, 192),rgb(53, 101, 108));
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 15px aqua;
+}
+.btn{
+    position: relative;
+    padding: 5px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to bottom, rgb(0, 195, 195),rgb(103, 167, 234));
+    transition: all 0.3s ease;
+    z-index: 1;
+    overflow: hidden;
+    color: white;
+    font-weight: bold;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    background: linear-gradient(to bottom, rgb(0, 255, 255),rgb(0, 179, 255));
+    z-index: -1;
+    border-radius: 50px;
+    animation: linear infinite 2s btn;
+    display: none;
+}
+@keyframes btn{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.btn::after{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: linear-gradient(to bottom, rgb(0, 195, 195),rgb(35, 105, 180));
+    z-index: -1;
+    border-radius: 50px;
+}
+.btn:hover::before{
+    box-shadow: 0 2 7px rgb(0, 0, 0);
+    display: flex;    
+}
+input{
+    color: white;
+    padding: 3px 3px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(4, 60, 116, 0.434);
+}
+input:focus{
+    outline: none;
+    color: white;
+    box-shadow: 0 0 7px aqua;
+}
+.logincontainer h2{
+    font-family: "mchine";
+    font-size: 2.5rem;
+    color: white;
+    letter-spacing: 2px;
+}
+.logincontainer p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.logincontainer::before{
+    position: absolute;
+    content: "";
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: 50%;
+    background: conic-gradient(aqua, blue, white);
+    z-index: -1;
+    animation: rotatet linear infinite 2s;
+}
+.logincontainer::after{
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 50%;
+    background: linear-gradient(to bottom,rgb(7, 30, 147),rgb(44, 84, 116));
+    z-index: -1;
+}
+input::placeholder{
+    color: rgb(0, 255, 255);
+}
+@keyframes rotatet {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
