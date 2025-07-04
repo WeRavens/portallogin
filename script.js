@@ -1,11 +1,23 @@
+const placeholderText = "Masukkan Password";
+const input = document.getElementById("passwd");
 
-const benar="1111";
-function loginn() {const pass=document.getElementById("password").value;
-   if (pass === benar){
-    document.querySelector(".containerl").style.display="none";
-    document.querySelector(".maincontainer").style.display="flex"
+let index = 0;
+function typePlaceholder() {
+  if (index <= placeholderText.length) {
+    input.setAttribute("placeholder", placeholderText.substring(0, index));
+    index++;
+    setTimeout(typePlaceholder, 100);
+  }
 }
-else {
-    alert ("Auto Detect>> YOU NOT ALLOWED")
-}
+typePlaceholder(); // Jalankan efek saat halaman dimuat
+
+
+function loginn() {
+  const passwordd= document.getElementById("passwd").value;
+  if (passwordd === "222"){
+    alert("dcdi")
+  }
+  else{
+    alert("dcd")
+  }
 }
